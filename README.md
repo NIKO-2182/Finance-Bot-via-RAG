@@ -1,100 +1,81 @@
-🤖 Finance Bot
+---
 
+## 🤖 Finance Bot
 
+### 📋 Overview  
+Finance Bot is an intelligent assistant designed to deliver precise and context-aware answers to financial queries using Retrieval-Augmented Generation (RAG). By integrating a curated financial document base with a powerful Mistral language model via LangChain, this assistant provides reliable and relevant insights across a wide spectrum of financial topics.
 
-📋 Overview
+### ✨ Features
 
-Finance Bot is an intelligent assistant that leverages Retrieval-Augmented Generation (RAG) to provide accurate, context-aware responses to financial questions. By combining the power of large language models with retrieval from a curated knowledge base, Finance Bot delivers specific, up-to-date financial information and advice.
+- **Natural Language Understanding**  
+  Communicate using everyday language for financial advice and information.
 
+- **Accurate Information Retrieval**  
+  Utilizes RAG to fetch data from a vectorized knowledge base for precision.
 
+- **Multi-Domain Financial Knowledge**  
+  Covers personal finance, investing, banking, taxation, and more.
 
-✨ Features
+- **Context-Aware Follow-ups**  
+  Maintains conversation history for coherent, progressive dialogue.
 
-🗣️ Natural Language Understanding: Communicate with the bot using everyday language to ask financial questions
+- **Source Attribution**  
+  Provides citations to knowledge base documents for transparency and further reading.
 
-🎯 Accurate Information Retrieval: Access precise financial data through RAG architecture
+### 🏗️ Architecture  
+Finance Bot is built on a modular RAG architecture composed of:
 
-🌐 Multi-domain Knowledge: Coverage of personal finance, investing, banking, taxes, and more
+- **Vector Database** — Stores embeddings of financial texts for semantic querying  
+- **Retriever** — Matches user queries with relevant financial documents  
+- **LLM Integration** — Synthesizes responses using retrieved content and the Mistral model for clarity and relevance
 
-🧠 Context-Aware Responses: The bot maintains conversation history to provide relevant follow-up information
+### 🧰 Tech Stack
 
-📚 Citation Support: References to source material for accountability and further reading
+- **LangChain** — Orchestrates RAG workflows and integrates LLM functionality  
+- **ChromaDB** — Embedding-based vector store for document retrieval  
+- **Transformers** — Powers language modeling and embedding generation  
+- **Flask** — Web framework for serving the bot via RESTful API or UI interface
 
+### 🚀 Getting Started
 
+#### Prerequisites
 
-🏗️ Architecture
+- Python 3.10+  
+- pip (Python package manager)  
+- 8GB+ RAM (recommended)
 
-Finance Bot is built on a RAG (Retrieval-Augmented Generation) architecture consisting of:
+#### Installation
 
-💾 Vector Database: Stores embeddings of financial knowledge documents
-
-🔍 Retriever: Fetches relevant documents based on query similarity
-
-🧩 LLM Integration: Generates coherent and accurate responses using retrieved context
-
-
-
-🚀 Getting Started
-
-📋 Prerequisites
-
-Python 3.10+
-pip (Python package manager)
-8GB+ RAM recommended
-
-⚙️ Installation
-
-Clone the repository:
+```bash
 git clone https://github.com/yourusername/finance-bot.git
 cd finance-bot
-
-Create and activate a virtual environment:
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-Install dependencies:
+source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
+cp .env.example .env       # Then edit .env with API keys and settings
+```
 
-Set up environment variables:
-cp .env.example .env
-Edit .env file with your API keys and configuration parameters.
+### 📱 Usage
 
+- **Ask Questions**  
+  _Example_: “How should I prioritize between paying off student loans and saving for retirement?”
 
+- **Contextual Follow-ups**  
+  _Example_: “What are the tax implications of that approach?”
 
-📱 Usage
+- **Customize by Domain**  
+  _Example_: “Tell me about mortgage refinancing options”
 
-❓ Ask a Question: Type a financial question in natural language
+### 🛠️ Customization
 
-Example: "How should I prioritize between paying off student loans and saving for retirement?"
+- **Expand the Knowledge Base**  
+  Add financial documents to `data/documents` and run:  
+  `python scripts/index_documents.py`
 
-🔄 Follow-up Questions: The bot maintains context of your conversation
+### 📜 License  
+Licensed under the MIT License. See the LICENSE file for details.
 
-Example: "What are the tax implications of that approach?"
+### 🙌 Acknowledgments  
+Built using **LangChain**, **Mistral-AI**, and supporting libraries. Grateful to the open-source community and contributors who made this project possible.
 
-🎛️ Customize Topics: Focus on specific financial domains
-
-Example: "Tell me about mortgage refinancing options"
-
-
-
-🛠️ Customization
-
-📝 Adding Custom Knowledge
-
-Place new financial documents in the data/documents directory
-Run the indexing script to update the knowledge base:
-Copy python scripts/index_documents.py
-
-
-
-📜 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-
-🙏 Acknowledgments
-
-🛠️ Built with [Langchain  Mistral-AI]
-
-🌟 Special thanks to the open source community for their invaluable contributions, especially the developers of libraries and tools that made this project possible
+---
